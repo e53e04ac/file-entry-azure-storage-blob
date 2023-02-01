@@ -228,6 +228,7 @@ const companion = ({
     }),
 });
 
+/** @type {import('.').FileEntryAzureStorageBlob.ConstructorWithCompanion} */
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as FileEntryAzureStorageBlob };
