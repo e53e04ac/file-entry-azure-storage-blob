@@ -91,22 +91,22 @@ const constructor = ((options) => {
         relative: ((destination) => {
             return pathRelative(self.path(), destination.path());
         }),
-        children: (async function* () {
+        children: (async function* (params) {
             throw new Error('Unsupported');
         }),
-        directories: (async function* () {
+        directories: (async function* (params) {
             throw new Error('Unsupported');
         }),
-        files: (async function* () {
+        files: (async function* (params) {
             throw new Error('Unsupported');
         }),
-        childrenSync: (function* () {
+        childrenSync: (function* (params) {
             throw new Error('Unsupported');
         }),
-        directoriesSync: (function* () {
+        directoriesSync: (function* (params) {
             throw new Error('Unsupported');
         }),
-        filesSync: (function* () {
+        filesSync: (function* (params) {
             throw new Error('Unsupported');
         }),
         createDirectory: (async () => {
