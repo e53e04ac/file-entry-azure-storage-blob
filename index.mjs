@@ -215,6 +215,9 @@ const constructor = ((options) => {
         createWriteStream: (async () => {
             throw new Error('Unsupported');
         }),
+        createWriteLineStream: (async (options) => {
+            throw new Error('Unsupported');
+        }),
     });
 
     return self;
