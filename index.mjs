@@ -209,6 +209,12 @@ const constructor = ((options) => {
         readJsonSync: ((options) => {
             throw new Error('Unsupported');
         }),
+        createReadStream: (async () => {
+            throw new Error('Unsupported');
+        }),
+        createWriteStream: (async () => {
+            throw new Error('Unsupported');
+        }),
     });
 
     return self;
