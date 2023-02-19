@@ -259,4 +259,5 @@ const companion = ({
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as FileEntryAzureStorageBlob };
+
 export { constructorWithCompanion as FileEntry };
