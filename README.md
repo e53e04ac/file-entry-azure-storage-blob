@@ -5,8 +5,8 @@ npm install e53e04ac/file-entry-azure-storage-blob
 ~~~~~
 
 ~~~~~ mjs
-import { FileEntryAzureStorageBlob } from 'e53e04ac/file-entry-azure-storage-blob';
-import { FileEntry } from 'e53e04ac/file-entry-azure-storage-blob';
+import { FileEntryAzureStorageBlob } from 'file-entry-azure-storage-blob';
+import { FileEntry } from 'file-entry-azure-storage-blob';
 ~~~~~
 
 ~~~~~ mermaid
@@ -23,9 +23,9 @@ graph RL;
     B_5(["file-entry"]);
   end;
   subgraph "github";
-    C_2(["e53e04ac/base\nf11ee2fdbe50099f68cc3e6c4098132ebfeeb16f"]);
-    C_3(["e53e04ac/hold\n593585d63bb24dc044f13a88375b53f9fa565229"]);
-    C_5(["e53e04ac/file-entry\n3b584f55af253b70ed8fddf4d804848782ef8705"]);
+    C_2(["e53e04ac/base\n1d4c074238c197e136cc1d4956685d90b7118af6"]);
+    C_3(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
+    C_5(["e53e04ac/file-entry\n31d65a68d97f3f8fd6a45b621b8a3d8245aa1e54"]);
   end;
   subgraph "npmjs";
     C_0(["@azure/identity\n3.1.3"]);
@@ -46,10 +46,10 @@ graph RL;
   B_5 ----> C_5;
   click C_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
   click C_1 "https://www.npmjs.com/package/@azure/storage-blob/v/12.13.0";
-  click C_2 "https://github.com/e53e04ac/base/tree/f11ee2fdbe50099f68cc3e6c4098132ebfeeb16f";
-  click C_3 "https://github.com/e53e04ac/hold/tree/593585d63bb24dc044f13a88375b53f9fa565229";
+  click C_2 "https://github.com/e53e04ac/base/tree/1d4c074238c197e136cc1d4956685d90b7118af6";
+  click C_3 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
   click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
-  click C_5 "https://github.com/e53e04ac/file-entry/tree/3b584f55af253b70ed8fddf4d804848782ef8705";
+  click C_5 "https://github.com/e53e04ac/file-entry/tree/31d65a68d97f3f8fd6a45b621b8a3d8245aa1e54";
 ~~~~~
 
 ~~~~~ mermaid
