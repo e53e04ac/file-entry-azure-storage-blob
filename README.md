@@ -11,16 +11,26 @@ import { FileEntry } from 'e53e04ac/file-entry-azure-storage-blob';
 
 ~~~~~ mermaid
 graph RL;
-  A(["package.json"]);
+  A["package.json\npackage-lock.json"];
   subgraph "dependencies";
     B_0(["@azure/identity"]);
     B_1(["@azure/storage-blob"]);
-    B_2(["e53e04ac/base"]);
-    B_3(["e53e04ac/hold"]);
+    B_2(["base"]);
+    B_3(["hold"]);
   end;
   subgraph "devDependencies";
     B_4(["@types/node"]);
-    B_5(["e53e04ac/file-entry"]);
+    B_5(["file-entry"]);
+  end;
+  subgraph "github";
+    C_2(["e53e04ac/base\n5f8ab34b8cf48f6fea778a530617ccc8aefa1970"]);
+    C_3(["e53e04ac/hold\n6845a848f97733b8cd8a34bfc03c3bf040818aa8"]);
+    C_5(["e53e04ac/file-entry\na15e61ae257f72be757cce2018bc2e2a6ff1962f"]);
+  end;
+  subgraph "npmjs";
+    C_0(["@azure/identity\n3.1.3"]);
+    C_1(["@azure/storage-blob\n12.13.0"]);
+    C_4(["@types/node\n18.14.1"]);
   end;
   A ----> B_0;
   A ----> B_1;
@@ -28,12 +38,18 @@ graph RL;
   A ----> B_3;
   A ----> B_4;
   A ----> B_5;
-  click B_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
-  click B_1 "https://www.npmjs.com/package/@azure/storage-blob/v/12.12.0";
-  click B_2 "https://github.com/e53e04ac/base/tree/fc0fe75d4737062206ea1b99def2b1b2df6b99fa";
-  click B_3 "https://github.com/e53e04ac/hold/tree/443c2e801bbe20409c761994a91fa88fb6044602";
-  click B_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
-  click B_5 "https://github.com/e53e04ac/file-entry/tree/69045717124e824d6d83b98b6866fcafe8f295ef";
+  B_0 ----> C_0;
+  B_1 ----> C_1;
+  B_2 ----> C_2;
+  B_3 ----> C_3;
+  B_4 ----> C_4;
+  B_5 ----> C_5;
+  click C_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
+  click C_1 "https://www.npmjs.com/package/@azure/storage-blob/v/12.13.0";
+  click C_2 "https://github.com/e53e04ac/base/tree/5f8ab34b8cf48f6fea778a530617ccc8aefa1970";
+  click C_3 "https://github.com/e53e04ac/hold/tree/6845a848f97733b8cd8a34bfc03c3bf040818aa8";
+  click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
+  click C_5 "https://github.com/e53e04ac/file-entry/tree/a15e61ae257f72be757cce2018bc2e2a6ff1962f";
 ~~~~~
 
 ~~~~~ mermaid
@@ -42,7 +58,7 @@ graph RL;
     E_0(["FileEntryAzureStorageBlob"]);
     E_1(["FileEntry"]);
   end;
-  M(["index.mjs"])
+  M["index.mjs"]
   subgraph "@azure/identity";
     I_0_0(["DefaultAzureCredential"]);
   end;
@@ -81,7 +97,7 @@ graph RL;
     E_2(["const FileEntryAzureStorageBlob"]);
     E_3(["const FileEntry"]);
   end;
-  M(["index.d.ts"])
+  M["index.d.ts"]
   subgraph "@azure/storage-blob";
     I_0_0(["BlockBlobClient"]);
     I_0_1(["ContainerClient"]);
