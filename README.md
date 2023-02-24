@@ -23,9 +23,9 @@ graph RL;
     B_5(["file-entry"]);
   end;
   subgraph "github";
-    C_2(["e53e04ac/base\n5f8ab34b8cf48f6fea778a530617ccc8aefa1970"]);
-    C_3(["e53e04ac/hold\n6845a848f97733b8cd8a34bfc03c3bf040818aa8"]);
-    C_5(["e53e04ac/file-entry\na15e61ae257f72be757cce2018bc2e2a6ff1962f"]);
+    C_2(["e53e04ac/base\nf11ee2fdbe50099f68cc3e6c4098132ebfeeb16f"]);
+    C_3(["e53e04ac/hold\n593585d63bb24dc044f13a88375b53f9fa565229"]);
+    C_5(["e53e04ac/file-entry\n3b584f55af253b70ed8fddf4d804848782ef8705"]);
   end;
   subgraph "npmjs";
     C_0(["@azure/identity\n3.1.3"]);
@@ -46,10 +46,45 @@ graph RL;
   B_5 ----> C_5;
   click C_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
   click C_1 "https://www.npmjs.com/package/@azure/storage-blob/v/12.13.0";
-  click C_2 "https://github.com/e53e04ac/base/tree/5f8ab34b8cf48f6fea778a530617ccc8aefa1970";
-  click C_3 "https://github.com/e53e04ac/hold/tree/6845a848f97733b8cd8a34bfc03c3bf040818aa8";
+  click C_2 "https://github.com/e53e04ac/base/tree/f11ee2fdbe50099f68cc3e6c4098132ebfeeb16f";
+  click C_3 "https://github.com/e53e04ac/hold/tree/593585d63bb24dc044f13a88375b53f9fa565229";
   click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
-  click C_5 "https://github.com/e53e04ac/file-entry/tree/a15e61ae257f72be757cce2018bc2e2a6ff1962f";
+  click C_5 "https://github.com/e53e04ac/file-entry/tree/3b584f55af253b70ed8fddf4d804848782ef8705";
+~~~~~
+
+~~~~~ mermaid
+graph RL;
+  subgraph "e53e04ac/file-entry-azure-storage-blob";
+    E_0(["namespace FileEntryAzureStorageBlob"]);
+    E_1(["type FileEntryAzureStorageBlob"]);
+    E_2(["const FileEntryAzureStorageBlob"]);
+    E_3(["const FileEntry"]);
+  end;
+  M["index.d.ts"]
+  subgraph "@azure/storage-blob";
+    I_0_0(["BlockBlobClient"]);
+    I_0_1(["ContainerClient"]);
+  end;
+  subgraph "base";
+    I_1_0(["Base"]);
+  end;
+  subgraph "file-entry";
+    I_2_0(["FileEntry"]);
+  end;
+  subgraph "hold";
+    I_3_0(["Get"]);
+    I_3_1(["ValueOrGet"]);
+  end;
+  M ----> I_0_0;
+  M ----> I_0_1;
+  M ----> I_1_0;
+  M ----> I_2_0;
+  M ----> I_3_0;
+  M ----> I_3_1;
+  E_0 ----> M;
+  E_1 ----> M;
+  E_2 ----> M;
+  E_3 ----> M;
 ~~~~~
 
 ~~~~~ mermaid
@@ -87,39 +122,4 @@ graph RL;
   M ----> I_4_1;
   E_0 ----> M;
   E_1 ----> M;
-~~~~~
-
-~~~~~ mermaid
-graph RL;
-  subgraph "e53e04ac/file-entry-azure-storage-blob";
-    E_0(["namespace FileEntryAzureStorageBlob"]);
-    E_1(["type FileEntryAzureStorageBlob"]);
-    E_2(["const FileEntryAzureStorageBlob"]);
-    E_3(["const FileEntry"]);
-  end;
-  M["index.d.ts"]
-  subgraph "@azure/storage-blob";
-    I_0_0(["BlockBlobClient"]);
-    I_0_1(["ContainerClient"]);
-  end;
-  subgraph "base";
-    I_1_0(["Base"]);
-  end;
-  subgraph "file-entry";
-    I_2_0(["FileEntry"]);
-  end;
-  subgraph "hold";
-    I_3_0(["Get"]);
-    I_3_1(["ValueOrGet"]);
-  end;
-  M ----> I_0_0;
-  M ----> I_0_1;
-  M ----> I_1_0;
-  M ----> I_2_0;
-  M ----> I_3_0;
-  M ----> I_3_1;
-  E_0 ----> M;
-  E_1 ----> M;
-  E_2 ----> M;
-  E_3 ----> M;
 ~~~~~
