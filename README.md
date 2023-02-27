@@ -23,14 +23,14 @@ graph RL;
     B_5(["file-entry"]);
   end;
   subgraph "github";
-    C_2(["e53e04ac/base\n1d4c074238c197e136cc1d4956685d90b7118af6"]);
-    C_3(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
-    C_5(["e53e04ac/file-entry\ncf3c1714aa58e9bdaa61fbcd1ca6594224aa0488"]);
+    C_2(["e53e04ac/base\nbc7288b2519bd72181940cd1f29a5301d840c650"]);
+    C_3(["e53e04ac/hold\n511bb6663491dadc6e2760a04ee3750996d069f8"]);
+    C_5(["e53e04ac/file-entry\nf47bb48601e4e7066cd1d17d5a5c035688cfc251"]);
   end;
   subgraph "npmjs";
     C_0(["@azure/identity\n3.1.3"]);
     C_1(["@azure/storage-blob\n12.13.0"]);
-    C_4(["@types/node\n18.14.1"]);
+    C_4(["@types/node\n18.14.2"]);
   end;
   A ----> B_0;
   A ----> B_1;
@@ -46,10 +46,10 @@ graph RL;
   B_5 ----> C_5;
   click C_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
   click C_1 "https://www.npmjs.com/package/@azure/storage-blob/v/12.13.0";
-  click C_2 "https://github.com/e53e04ac/base/tree/1d4c074238c197e136cc1d4956685d90b7118af6";
-  click C_3 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
-  click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
-  click C_5 "https://github.com/e53e04ac/file-entry/tree/cf3c1714aa58e9bdaa61fbcd1ca6594224aa0488";
+  click C_2 "https://github.com/e53e04ac/base/tree/bc7288b2519bd72181940cd1f29a5301d840c650";
+  click C_3 "https://github.com/e53e04ac/hold/tree/511bb6663491dadc6e2760a04ee3750996d069f8";
+  click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.2";
+  click C_5 "https://github.com/e53e04ac/file-entry/tree/f47bb48601e4e7066cd1d17d5a5c035688cfc251";
 ~~~~~
 
 ~~~~~ mermaid
